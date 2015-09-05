@@ -21,6 +21,9 @@
 
 #include <stdio.h>
 
+#define DIV_LINE printf("---------------------------\
+---------------------------\n\n");
+
 int main(void)
 {   
     int  a = 3;
@@ -31,8 +34,7 @@ int main(void)
     *p = 9;
     printf("a   = %d  p = %08x\n",  a, p);
 
-
-    printf("\n");
+    DIV_LINE;
     char*   pC;
     short*  pS;
     int*    pI;

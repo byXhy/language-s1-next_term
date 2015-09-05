@@ -21,6 +21,9 @@
 
 #include <stdio.h>
 
+#define DIV_LINE printf("---------------------------\
+---------------------------\n\n");
+
 int main(void)
 {   
     int a = 3;
@@ -30,25 +33,21 @@ int main(void)
     const int* p1 = &a;
     p1 = NULL;
     //*p1 = 5;    wrong
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     int const* p2 = &b;
     p2 = NULL;
     //*p2 = 5;    wrong
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     int* const p3 = &c;
     //p3 = NULL;  wrong
     *p3 = 5;    
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     const int* const p4 = &d;
     //p3 = NULL;  wrong
     //*p4 = 5;    wrong
-    printf("------------------------------------------------------\n");
 
     return 0;
 }

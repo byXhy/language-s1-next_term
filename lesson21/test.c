@@ -21,6 +21,9 @@
 
 #include <stdio.h>
 
+#define DIV_LINE printf("---------------------------\
+---------------------------\n\n");
+
 int main(void)
 {
     unsigned int a1 = 0x000000088;
@@ -29,9 +32,8 @@ int main(void)
 
     printf("*b1 = %08x\n", *b1);
     printf("(unsigned char)a1 = %08x\n", (unsigned char)a1);
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     unsigned int a2 = 0xF0000078;
 
     char* b2 =(char*)&a2;

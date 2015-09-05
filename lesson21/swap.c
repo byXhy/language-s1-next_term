@@ -21,6 +21,9 @@
 
 #include <stdio.h>
 
+#define DIV_LINE printf("---------------------------\
+---------------------------\n\n");
+
 void f1(int a, int b)
 {
     a = 2;
@@ -57,22 +60,19 @@ void swap2(int* a, int* b)
 }
 
 int main(void)
-{   
-    
+{      
     int i = 7;
     int j = 9;
     printf("i = %d  j = %d\n", i, j);
 
     f1(i, j);
     printf("i = %d  j = %d\n", i, j);
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     f2(&i, &j);
     printf("i = %d  j = %d\n", i, j);
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     int a = 4; 
     int b = 8;
     printf("a = %d  b = %d\n", a, b);
@@ -85,8 +85,6 @@ int main(void)
 
     swap2(&a, &b);
     printf("a = %d  b = %d\n", a, b); 
-    printf("------------------------------------------------------\n");
-
 
     return 0;
 }

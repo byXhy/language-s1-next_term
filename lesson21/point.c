@@ -20,6 +20,9 @@
  */
 
 #include <stdio.h>
+ 
+#define DIV_LINE printf("---------------------------\
+---------------------------\n\n");
 
 int main(void)
 {   
@@ -31,10 +34,8 @@ int main(void)
 
     *p = 9;
     printf("a   = %d  p = %08X\n",  a, p);
-    printf("------------------------------------------------------\n");
-
-
-    printf("\n");
+    
+    DIV_LINE;
     char*   pC;
     short*  pS;
     int*    pI;
@@ -47,9 +48,8 @@ int main(void)
 
     /* pI vs & pI ?? */
     printf("pI  = %0X &pI  = %0X &b = %0X \nb   = %d   *pI  = %d\n", pI, &pI, &b, b, *pI);
-    printf("------------------------------------------------------\n");
-
-    printf("\n");
+    
+    DIV_LINE;
     printf("sizeof(int*)   = %d sizeof(pI) = %d &pI = %0X\n", sizeof(int*),   sizeof(pI), &pI);
     printf("sizeof(char*)  = %d sizeof(pC) = %d &pC = %0X\n", sizeof(char*),  sizeof(pC), &pC);
     printf("sizeof(short*) = %d sizeof(pS) = %d &pS = %0X\n", sizeof(short*), sizeof(pS), &pS);
