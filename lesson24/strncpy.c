@@ -31,7 +31,7 @@ char* strncpy1(char* dst, const char* src, size_t len)
     char* ret = dst;
 
     assert(dst && src);
-    
+
     while (len--){
         *dst++ = *src++;
     }
@@ -47,13 +47,13 @@ int main(void)
     char a[] = {'a', 'b', '\0'};
     char b[] = {'x', 'y'};
 
-    printf("strncpy(dst,  b) = %s\n", strncpy(dst, b, 6)); //abab
+    printf("strncpy(dst,  b) = %s\n", strncpy(dst, b, 2));  //xy
     DIV_LINE;
 
-    printf("strncpy1(dst, a) = %s\n", strncpy1(dst, a, 6)); //ab
+    printf("strncpy1(dst, a) = %s\n", strncpy1(dst, a, 3)); //ab
     DIV_LINE;
 
-    printf("strncpy1(a,   b) = %s\n", strncpy1(a, b, 6)); //ab
+    printf("strncpy1(a,   b) = %s\n", strncpy1(a, b, 2));   //ab
     DIV_LINE;
 
     return 0;
